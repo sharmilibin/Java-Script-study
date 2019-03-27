@@ -1,6 +1,6 @@
 
-/*Function constructor*/
-/***********************/
+/*Function constructor
+/**********************
 
 var john = {
     name:'john',
@@ -28,4 +28,33 @@ jane.calculateAge();
 mark.calculateAge();
 console.log(john.lastName);
 console.log(jane.lastName);
-console.log(mark.lastName);
+console.log(mark.lastName);*/
+
+
+/*Objects and functions*/
+
+var obj1 ={ 
+    name : 'sharmi',
+    Age : 28
+};
+var obj2 = obj1;
+obj1.age = 27;
+console.log(obj1.age);
+console.log(obj2.age);
+ 
+
+var age = 25;
+var obj = {
+    name : 'libin',
+    city :'portland'
+};
+
+function change(a,b)
+{
+    a=30,
+    b.city='florida'
+};
+
+change(age,obj)
+console.log(age);
+console.log(obj);
