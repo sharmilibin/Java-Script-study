@@ -31,7 +31,7 @@ console.log(jane.lastName);
 console.log(mark.lastName);*/
 
 
-/*Objects and functions*/
+/*Objects and functions
 
 var obj1 ={ 
     name : 'sharmi',
@@ -57,4 +57,47 @@ function change(a,b)
 
 change(age,obj)
 console.log(age);
-console.log(obj);
+console.log(obj);*/
+
+
+//Passing Function as Arguements
+
+var years = [1990,1995,1989,2013,1983,1940];
+
+function arraycalc(arr,fn)
+{
+  
+    var arres=[];
+    for(var i=0; i < arr.length ; i++){
+    arres.push(fn(arr[i]));
+    }
+    return arres;
+}
+
+function calcAge(el)
+{
+  return 2019-el;
+}
+function isfullAge(el)
+{
+    return el >= 18;
+}
+function heartBeat(el)
+{
+if( el >=18 && el <= 70){
+    return Math.round(206.9-(0.67*el));
+}
+else{
+    return 0;
+}
+}
+var ages = arraycalc(years,calcAge);
+var fullAge = arraycalc(ages,isfullAge);
+var heartrate = arraycalc(ages,heartBeat);
+console.log(ages);
+console.log(fullAge);
+console.log(heartrate);
+
+
+
+
